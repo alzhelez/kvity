@@ -21,13 +21,11 @@ npx expo-doctor             # diagnose dependency and config issues
 npx expo install --fix      # fix incompatible package versions
 ```
 
-Run lint and typecheck before declaring any task done.
+Run lint, typecheck and `npm run test:sync` before declaring any task done.
 
-## Navigation & Routing
+## Navigation
 
-- Use **Expo Router** for all navigation. Routes live in `src/app/` — every file there is a screen, `_layout.tsx` files define navigators. Keep non-route code (components, hooks, utils) outside `src/app/`.
-- Import `Link`, `router`, and `useLocalSearchParams` from `expo-router`.
-- Docs: https://docs.expo.dev/router/introduction.md
+This app has a single screen (`App.tsx`) with in-screen tabs and modal sheets; it does not use Expo Router. Keep it that way unless the app grows multiple real screens.
 
 ## Building with EAS
 

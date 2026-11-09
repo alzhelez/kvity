@@ -1,17 +1,23 @@
 {
   "expo": {
-    "name": "kvity",
+    "name": "Квиты",
     "slug": "kvity",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#EEF0F6",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "app.kvity",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Камера нужна, чтобы считать QR-код синхронизации с телефона соседа."
+      }
     },
     "android": {
+      "package": "app.kvity",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#2E43E8",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
@@ -20,6 +26,17 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Камера нужна, чтобы считать QR-код синхронизации с телефона соседа.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ]
+    ]
   }
 }

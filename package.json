@@ -3,20 +3,38 @@
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
+    "@expo-google-fonts/dela-gothic-one": "^0.4.1",
+    "@expo-google-fonts/golos-text": "^0.4.2",
+    "@expo-google-fonts/jetbrains-mono": "^0.4.1",
+    "@react-native-async-storage/async-storage": "2.2.0",
     "expo": "~58.0.22",
+    "expo-camera": "~58.0.14",
+    "expo-clipboard": "~58.0.4",
+    "expo-font": "~58.0.11",
     "expo-status-bar": "~58.0.4",
+    "pako": "^3.0.3",
     "react": "19.3.0",
-    "react-native": "0.88.1"
+    "react-native": "0.88.1",
+    "react-native-qrcode-svg": "^6.3.50",
+    "react-native-safe-area-context": "~5.10.1",
+    "react-native-svg": "15.16.0"
   },
   "devDependencies": {
+    "@types/pako": "^2.0.4",
     "@types/react": "~19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-expo": "^58.0.4",
+    "tsx": "^4.23.15",
     "typescript": "~6.0.3"
   },
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "lint": "expo lint",
+    "typecheck": "tsc --noEmit",
+    "test:sync": "tsx scripts/sync-check.ts"
   },
   "private": true
 }
